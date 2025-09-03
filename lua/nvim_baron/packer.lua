@@ -35,4 +35,21 @@ return require('packer').startup(function(use)
       end
   }
 
+  use {
+      'nvim-telescope/telescope-file-browser.nvim',
+      requires = { 'nvim-telescope/telescope.nvim' },
+      config = function()
+          require("telescope").load_extension "file_browser"
+      end
+  }
+  use {
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+          'nvim-tree/nvim-web-devicons', -- optional, for file icons
+      },
+      config = function()
+          require("nvim-tree").setup()
+      end
+  }
+
 end)
