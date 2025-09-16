@@ -4,5 +4,6 @@ return {
 	on_attach = on_attach,
 	cmd = { 'pylsp' },
 	filetypes = { 'python' },
-	root_markers = {{ 'pyproject.toml', 'setup.py', 'setup.cfg', 'requirements.txt', 'Pipefile'},  '.git'}
+	root_markers = {{ 'pyproject.toml', 'setup.py', 'setup.cfg', 'requirements.txt', 'Pipefile'},  '.git'},
+    capabilities = require('blink.cmp').get_lsp_capabilities()
 }

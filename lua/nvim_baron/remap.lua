@@ -21,6 +21,7 @@ vim.api.nvim_create_autocmd('VimEnter', {
         vim.keymap.set('v', '<leader>p', '"_dP')
         vim.keymap.set('n', '<leader>d', "\"_d")
         vim.keymap.set('v', '<leader>d', "\"_d")
+        vim.keymap.set('n', '<leader>st', '<cmd>NvimTreeToggle<CR>')
     end
 })
 
@@ -33,4 +34,3 @@ end)
 vim.keymap.set('n', '<leader>s', ':%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>')
 vim.keymap.set('n', '<leader>x', '<cmd>!chmod %<CR>', { silent = true })
 
-vim.keymap.set('n', '<leader>st', '<cmd>NvimTreeToggle<CR>')

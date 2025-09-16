@@ -51,5 +51,34 @@ return require('packer').startup(function(use)
           require("nvim-tree").setup()
       end
   }
+  -- Assuming you already have Packer setup
+return require('packer').startup(function(use)
+  -- other plugins ...
+
+  use {
+      'saghen/blink.cmp',
+      requires = {'rafamadriz/friendly-snippets'},
+      config = function()
+          require('blink.cmp').setup {
+              signature = { enabled = true},
+              keymap = {
+                  preset = "default",  
+              },
+              completion = {
+                  documentation = {
+                      auto_show = true,
+                      auto_show_delay_ms = 200,
+                  },
+                  ghost_text = { enabled = true },
+                  accept = {
+                      auto_brackets = { enabled = true },
+                  },
+              },
+          }
+      end
+  }
+end)
+
+
 
 end)

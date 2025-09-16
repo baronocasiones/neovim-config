@@ -2,6 +2,7 @@ vim.lsp.enable('lua_ls')
 vim.lsp.enable('tsserver')
 vim.lsp.enable('pylsp')
 vim.lsp.enable('jdtls')
+vim.lsp.enable('asm_lsp')
 
 return function(client, bufnr)
 	local opts = { noremap=true, silent=true, buffer=bufnr }
